@@ -27,7 +27,7 @@ const RouteWrapper = () => {
 
   useEffect(() => {
     if (user === null && !location.pathname.includes('/Auth')) {
-      navigate('/Auth/Signin');
+      navigate('/');
     }
     if (!location.pathname.includes('Profile')) {
       dispatch(remove_profile_data());
