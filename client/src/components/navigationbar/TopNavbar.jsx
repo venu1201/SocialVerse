@@ -59,7 +59,7 @@ const Navbar = () => {
   const handlelogout = () => {
     localStorage.removeItem('profile');
     dispatch(clear_google());
-    navigate('/Auth/Signin');
+    navigate('/');
   }
   if (authData === null)
     return

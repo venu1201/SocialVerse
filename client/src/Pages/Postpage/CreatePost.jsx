@@ -157,8 +157,7 @@ const CreatePost = () => {
                                 <textarea onChange={handlechange} name='description' placeholder='Whats in Your Mind' className='w-[95%]  text-black text-[18px] outline-none border-none p-4 h-[80px] resize-none' />
 
                             </div>
-                            <div className='flex flex-col gap-2'>
-                                <div className='text-[23px]'>DESCRIPTION</div>
+                            <div className='flex flex-col mt-2'>
                                 <div
                                     {...getRootProps()}
                                     className={`p-4 medium:px-20 px-5 cursor-pointer w-[95%] h-[400px] border-2 border-black flex justify-center items-center bg-white ${(formdata.selectedfile === null && loading === false) ? 'border-blue-500 bg-blue-100' : 'bg-slate-900'

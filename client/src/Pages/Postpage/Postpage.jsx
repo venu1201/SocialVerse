@@ -229,7 +229,7 @@ const Postpage = () => {
                 <div className='h-full w-full flex-col xlarge:px-5 medium:px-3 pt-5'>
                     <div className='w-full  flex  xlarge:flex-row flex-col   gap-5    bg-slate-950'>
                         <div className='h-[440px] xlarge:w-[350px] xlarge:py-0 py-2 w-full xlarge:justify-normal flex justify-center '>
-                            <img src={postdata.selectedfile} className='h-[440px] medium:w-[400px] w-[95%] xlarge:w-full object-fill' alt="" />
+                            <img src={postdata.selectedfile || avatar} className='h-[440px] medium:w-[400px] w-[95%] xlarge:w-full object-fill' alt="" />
                         </div>
                         <div className='h-full mt-2 xlarge:w-[calc(100%-350px)] w-full xlarge:pb-0 pb-2 xlarge:px-0 px-3'>
                             <div className='w-full flex justify-between'>

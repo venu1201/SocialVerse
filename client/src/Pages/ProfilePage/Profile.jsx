@@ -146,7 +146,7 @@ const Profile = () => {
 
                 </div>
                 <div className='medium:pl-5 pl-2 pt-2'>
-                  <div className='text-[28px]'>
+                  <div className='text-[22px]'>
                     {"@" + userdata?.username}
                   </div>
                   <div className='mt-4 pl-2 gap-3 text-[15px] flex '>

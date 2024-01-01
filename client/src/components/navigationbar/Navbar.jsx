@@ -108,7 +108,7 @@ const Navbar = () => {
             SocialVerse
           </div>
         </div>
-        <div onClick={()=>navigate(`/Profile/${authData.username}`)} className='w-full  flex gap-2 pl-3   h-[60px]'>
+        <div onClick={()=>navigate(`/Profile/${authData.username}`)} className='w-full cursor-pointer  flex gap-2 pl-3   h-[60px]'>
             <div className='min-h-[60px]  '>
               <img className='h-[60px] w-[60px] rounded-full' src={authData.profilepicture} alt="" />
             </div>
