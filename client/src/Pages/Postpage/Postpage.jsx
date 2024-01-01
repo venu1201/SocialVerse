@@ -116,7 +116,7 @@ const Postpage = () => {
         return 'just now';
     }
     const [load, setload] = useState(false);
-    const [load3,setload3]=useState(false);
+    const [load3, setload3] = useState(false);
     const handlelikeandcomment = async (liked) => {
         try {
             if (liked === false) {
@@ -235,10 +235,10 @@ const Postpage = () => {
                             <div className='w-full flex justify-between'>
                                 <div onClick={() => navigate(`/Profile/${user.username}`)} className='flex gap-3'>
                                     <div className='w-[70px] h-[70px]'>
-                                        <img className='h-full w-full rounded-full' src={user.profilepicture} alt="" />
+                                        <img className='h-full w-full rounded-full' src={user.profilepicture || avatar} alt="" />
                                     </div>
-                                    <div className='flex flex-col gap-2 justify-center items-center'>
-                                        <div className='w-full text-[24px]'>
+                                    <div className='flex flex-col gap-2 justify-center w-[160px] overflow-scroll items-center'>
+                                        <div className='w-full text-[18px]'>
                                             {"@" + user.username}
                                         </div>
                                         <div className='text-[16px] text-slate-400'>
@@ -256,7 +256,7 @@ const Postpage = () => {
                                     ) : (
                                         <div className='flex text-white justify-center items-center gap-3 px-3'>
 
-                                            <button onClick={() => func2(user.username)} className={`text-[22px] ${networkvalue === "Add" ? "bg-orange-500" : "bg-orange-400"} w-[130px] rounded-lg h-[45px]`}>
+                                            <button onClick={() => func2(user.username)} className={`text-[14px] ${networkvalue === "Add" ? "bg-orange-500" : "bg-orange-400"} w-[80px] rounded-lg h-[35px]`}>
                                                 {networkLoading === true ? (
                                                     <span className='h-full w-full flex justify-center items-center'>
                                                         <LoadingSpinner />
@@ -271,11 +271,12 @@ const Postpage = () => {
                                     )
                                 }
                             </div>
-                            <div className='w-full h-[35px] overflow-scroll mt-3'>
+                            {postdata?.description?.length > 0 && <div className='w-full h-[35px] overflow-scroll mt-3'>
 
                                 {postdata.description}
                                 <span className='text-slate-400'> {tagsTostring(postdata.tags)}</span>
-                            </div>
+                            </div>}
+
                             <div className='h-[185px] overflow-scroll mt-2 border-t-2 border-slate-500'>
                                 {postdata.Comments.length === 0 ? (
                                     <div className='w-full flex justify-center text-cyan-600 text-[20px] items-center h-full '>
@@ -307,11 +308,11 @@ const Postpage = () => {
                                     <div className='flex justify-center items-center gap-4'>
                                         <span>{postdata.likeCount.length}</span>
                                         <button className={`h-[30px] w-full ${postdata.likeCount.includes(authData.username) === true ? "" : ""}  `} onClick={() => handlelikeandcomment(true)}>
-                                            {postdata.likeCount.includes(authData.username)===true?(
-                                            <img className={`h-full w-full ${load3===true?"animate-spin":"animate-none"}`} src={liked} alt="" />
+                                            {postdata.likeCount.includes(authData.username) === true ? (
+                                                <img className={`h-full w-full ${load3 === true ? "animate-spin" : "animate-none"}`} src={liked} alt="" />
 
-                                            ):(
-                                            <img className={`h-full w-full ${load3===true?"animate-spin":"animate-none"}`} src={like} alt="" />
+                                            ) : (
+                                                <img className={`h-full w-full ${load3 === true ? "animate-spin" : "animate-none"}`} src={like} alt="" />
 
                                             )}
                                         </button>
@@ -322,12 +323,12 @@ const Postpage = () => {
                                     </button>
                                 </div>
                                 <div className='flex justify-center items-center'>
-                                    <button onClick={()=>handleSaveButton()} className='flex justify-center items-center'>
+                                    <button onClick={() => handleSaveButton()} className='flex justify-center items-center'>
                                         {authData.savedposts.includes(id) === true ? (
-                                            <img className={`h-[25px] ${load2===true?"animate-spin":"animate-none"} w-[25px] `} src={saved} alt="" />
+                                            <img className={`h-[25px] ${load2 === true ? "animate-spin" : "animate-none"} w-[25px] `} src={saved} alt="" />
 
                                         ) : (
-                                            <img className={`h-[25px] ${load2===true?"animate-spin":"animate-none"}  w-[25px]`} src={saveicon} alt="" />
+                                            <img className={`h-[25px] ${load2 === true ? "animate-spin" : "animate-none"}  w-[25px]`} src={saveicon} alt="" />
 
                                         )}
                                     </button>

@@ -144,7 +144,7 @@ export async function getPopularPosts(req, res) {
         }
       },
       { $sort: { totalInteractions: -1 } },
-      { $limit: 20 },
+      { $limit: 30 },
     ]);
     res.status(200).json({result: topPosts });
   } catch (error) {

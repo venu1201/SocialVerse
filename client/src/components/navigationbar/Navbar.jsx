@@ -40,6 +40,8 @@ const Navbar = () => {
   const hasUnseenNotification = (notificationList) => {
     return notificationList.some((notification) => notification.seen === false);
   };
+  
+  
   useEffect(() => {
     if (location.pathname.includes('/')) {
       setactive(0);

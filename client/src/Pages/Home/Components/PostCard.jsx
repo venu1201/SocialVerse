@@ -15,6 +15,7 @@ import comment from '../../../assets/icons/comment2.svg'
 import save from '../../../assets/icons/save.svg'
 import saved from '../../../assets/icons/saved.svg'
 import { useNavigate } from 'react-router-dom'
+import { avatar } from '../../../assets';
 
 
 const PostCard = ({item}) => {
@@ -65,14 +66,14 @@ const PostCard = ({item}) => {
     <div className='w-full   flex flex-col gap-3 overflow-hidden  '>
         <div onClick={()=>navigate(`/Profile/${item.userInfo.username}`)} className='w-full cursor-pointer   gap-2 mt-4 flex h-[60px]'>
             <div className='h-full'>
-                <img className='h-[60px] w-[60px] rounded-full' src={item.userInfo.profilepicture} alt="" />
+                <img className='h-[60px] w-[60px] rounded-full' src={item.userInfo.profilepicture || avatar} alt="" />
             </div>
-            <div className='w-[calc(100%-60px)] flex flex-col'>
-                <div className='flex h-[50%] gap-2 items-center text-[24px]'>
+            <div className='w-[calc(100%-68px)] flex flex-col'>
+                <div className='flex h-[50%] w-full overflow-scroll whitespace-nowrap gap-2 items-center text-[18px]'>
                     <span>{item.userInfo.firstname}</span>
                     <span>{item.userInfo.lastname}</span>
                 </div>
-                <div className='text-[18px] text-slate-400'>
+                <div className='text-[18px] overflow-scroll text-slate-400'>
                     <span>{"@"+item.userInfo.username}</span>
                 </div>
             </div>

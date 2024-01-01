@@ -117,13 +117,13 @@ const Network = () => {
                 theme="colored"
             />
             {data === null ? (
-                <div className='w-[90%] flex flex-col gap-10 pt-[40px] h-full '>
+                <div className='w-[95%] flex flex-col gap-10 pt-[40px] h-full '>
                     <h3 className='text-[40px] flex gap-3'>
                         <button className='text-[40px]  cursor-pointer'>{"<"}</button>
                         <span>{params.type}</span>
                     </h3>
                     <div className=' gap-[5px] mt-3 w-full '>
-                        <div className=' w-full flex flex-wrap gap-2'>
+                        <div className=' w-full flex justify-center flex-wrap gap-2'>
                             {[1, 2, 3, 4, 5, 6].map((item, index) => (
                                 <div key={item} className='w-[269px] h-[290px] pt-4 flex flex-col gap-3   bg-blue-900 animate-pulse'>
 

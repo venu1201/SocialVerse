@@ -30,7 +30,6 @@ const Feeds = () => {
   }, []);
 
   const fetchNextPage = async () => {
-    console.log('Fetching next page:', page);
     try {
       const response = await getposts(page, authData.username);
       setPosts((prevPosts) => [...prevPosts, ...response.data.posts]);
@@ -41,17 +40,17 @@ const Feeds = () => {
     } finally {
     }
   };
-  console.log(posts)
   return (
     <div id='parent' className='w-full overflow-scroll h-full flex justify-center'>
       <div  className='Large:w-[90%] w-full   xmedium:pt-[10px] pb-[50px]  h-full '>
         {loading === true && (
-          <div className=' w-full gap-4 flex items-center flex-col'
+          <div className=' w-full mt-7 gap-4 flex items-center flex-col'
           >
+            
             {[1, 2, 3, 4].map((item, index) => (
-              <div key={index} className='text-white  rounded-3xl bg-blue-950 animate-pulse w-[600px] min-h-[650px] flex '>
-                           
-                </div>
+              <div key={index} className='text-white bg-blue-950 animate-pulse xmedium:rounded-3xl  large:w-[580px] xSmall:w-[520px] xsmall:w-[580px] xmedium:w-[510px] medium:w-[98%] w-full medium:px-[20px] px-[10px] flex justify-center h-[500px] items-center'>
+                
+            </div>
             ))}
 
           </div>

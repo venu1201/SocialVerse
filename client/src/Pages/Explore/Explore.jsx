@@ -98,9 +98,9 @@ const Explore = () => {
                     </div>
                 </div>
                 <div className='flex justify-center'>
-                    <div className='flex justify-evenly xmedium:w-[60%] w-[100%]'>
+                    <div className='flex flex-wrap justify-evenly gap-4 xmedium:w-[60%] w-[100%]'>
                         {tags.map((item, index) => (
-                            <div onClick={() => handlesearch(item._id)} className={`${index > 4 ? "hidden" : "flex"}`} key={index}>{"#"+item._id}</div>
+                            <div onClick={() => handlesearch(item._id)} className={`${index > 4 ? "hidden" : "flex"} flex overflow-ellipsis text-[16px]  `} key={index}>{"#"+item._id}</div>
                         ))}
                     </div>
 

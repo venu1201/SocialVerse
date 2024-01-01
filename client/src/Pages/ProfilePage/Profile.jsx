@@ -123,7 +123,7 @@ const Profile = () => {
             {/* <Switch data={["Posts", "Blogs","saved"]} setshowposts={setshowposts} /> */}
 
           </div>
-          <div className='mt-4 flex flex-wrap  h-full gap-3 w-[90%] mx-auto'>
+          <div className='mt-4 flex flex-wrap justify-center  h-full gap-3 w-[90%] mx-auto'>
             {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((item, index) => (
               <div key={item} className='w-[300px] bg-blue-900 animate-pulse h-[300px]'>
 
