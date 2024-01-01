@@ -237,7 +237,7 @@ export const getTopCreators = async (req, res) => {
             $sort: { totalScore: -1 },
           },
           {
-            $limit: 20,
+            $limit: 25,
           },
         ]);
         // Send the response with the top 20 creators in the form of User schema

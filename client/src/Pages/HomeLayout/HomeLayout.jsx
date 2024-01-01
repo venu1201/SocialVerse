@@ -26,10 +26,10 @@ const HomeLayout = () => {
         <div className='Small:w-[calc(100%-250px)] xmedium:w-[calc(100%-90px)] w-full flex justify-center h-[calc(100%-200px)] xmedium:h-full'>
             <Outlet/>
         </div>
-        <div className='xmedium:hidden flex h-[65px] '>
+        <div className='xmedium:hidden flex h-[73px] '>
             <DownNavbar/>
         </div>
-        <div className='xmedium:hidden flex h-[65px]'>
+        <div className='xmedium:hidden flex h-[57px]'>
         </div>
 
              

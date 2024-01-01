@@ -191,38 +191,8 @@ const Postpage = () => {
                 theme="colored"
             />
             {(postdata === null || loading === true) ? (
-                <div className='h-full w-full flex-col px-5 pt-5'>
-                    <div className='w-full  flex  gap-5   '>
-                        <div className='h-[420px] bg-blue-950 animate-pulse  w-[400px]'>
-                        </div>
-                        <div className='h-full mt-2 w-[calc(100%-400px)]'>
-                            <div className='w-full flex justify-between'>
-                                <div className='flex gap-3'>
-                                    <div className='w-[70px] h-[70px] bg-blue-950 animate-pulse'>
-                                    </div>
-                                    <div className='flex bg-blue-950 animate-pulse flex-col gap-2 justify-center items-center'>
-
-                                    </div>
-                                </div>
-
-                                <div className='flex justify-center items-center gap-3 px-3'>
-                                    <button className=' px-3 bg-blue-950 animate-pulse h-[40px] rounded-lg w-full' onClick={() => deletepost()}>
-                                    </button>
-                                </div>
-
-                            </div>
-
-                            <div className='h-[185px] bg-blue-950 animate-pulse overflow-scroll mt-2 '>
-
-                            </div>
-                            <div className='flex bg-blue-950 animate-pulse  pr-10 justify-between text-[18px] mt-3 pt-3 w-full'>
-
-                            </div>
-                            <div className='flex h-[55px] bg-blue-950 animate-pulse items-center mt-3 w-full'>
-
-                            </div>
-                        </div>
-                    </div>
+                <div className='h-full flex w-full justify-center items-center'>
+                    <LoadingSpinner/>
 
                 </div>
             ) : (
