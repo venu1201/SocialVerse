@@ -23,11 +23,14 @@ const HomeLayout = () => {
         <div className='xmedium:hidden  flex justify-center items-center h-[70px]'>
             <TopNavbar/>
         </div>
-        <div className='Small:w-[calc(100%-250px)] xmedium:w-[calc(100%-90px)] w-full flex justify-center h-[calc(100%-120px)] xmedium:h-full    '>
+        <div className='Small:w-[calc(100%-250px)] xmedium:w-[calc(100%-90px)] w-full flex justify-center h-[calc(100%-170px)] xmedium:h-full    '>
             <Outlet/>
         </div>
         <div className='xmedium:hidden flex h-[50px] '>
             <DownNavbar/>
+        </div>
+        <div className='xmedium:hidden flex h-[50px]'>
+            
         </div>
         
         
