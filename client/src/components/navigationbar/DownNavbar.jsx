@@ -60,7 +60,6 @@ const Navbar = () => {
 
   }, [location])
   const handleclick = (index) => {
-    console.log(index)
     setactive(index);
     if (array[index] === 'People') {
       navigate('/People')

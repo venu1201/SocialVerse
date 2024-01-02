@@ -25,7 +25,6 @@ const Features = () => {
         dispatch(settagquery(q));
         navigate('/Explore')
     }
-    console.log(Toptags)
     return (
         <div className='w-full flex pt-10 flex-col gap-10 h-full overflow-scroll'>
             <div className='w-full xlarge:flex hidden' >

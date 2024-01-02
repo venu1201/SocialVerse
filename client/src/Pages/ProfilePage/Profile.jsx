@@ -24,7 +24,6 @@ const Profile = () => {
   const [others, setothers] = useState(false);
   const dispatch = useDispatch();
   //functions 
-  console.log(userdata);
   const func2 = async (username) => {
     const p = { user: authdata.username, touser: user };
     setloadingspinner(true);
@@ -47,7 +46,6 @@ const Profile = () => {
       setloading(true);
       try {
         const response = await getProfileData(user);
-        console.log(response);
         setuserdata(response.data.result);
         setuserposts(response.data.posts);
         setusersavedposts(response.data.saved);
@@ -58,7 +56,6 @@ const Profile = () => {
         }
         else
           setothers(true);
-        console.log(response.data)
       } catch (error) {
         console.log(error)
       } finally {

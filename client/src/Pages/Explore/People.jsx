@@ -18,7 +18,6 @@ const People = () => {
             try {
                 const response = await getTopCreators();
                 setvalue('Top Creators');
-                console.log(response.data.result);
                 setposts(response.data.result)
             } catch (error) {
                 console.log(error);
