@@ -78,9 +78,11 @@ const PostCard = ({item}) => {
                 </div>
             </div>
         </div>
+        {item.description.length>0 && (
         <div className=' whitespace-nowrap h-[25px] overflow-scroll  '>
             {item.description} <span className='text-slate-400'>{tagsTostring(item.tags)}</span>
         </div>
+        )}
         <div onClick={()=>navigate(`/Post/${item._id}`)} className='w-full cursor-pointer xmedium:h-[530px] medium:h-[500px] tiny:h-[430px] h-[350px]'>
             <img className='h-full w-full object-fill' src={item.selectedfile} alt="" />
         </div>

@@ -1,0 +1,20 @@
+{
+    "routes": [
+      { "handle": "filesystem" },
+      { "src": "/", "dest": "/Auth/Signin" },
+      { "src": "/Auth/Signup", "dest": "/Auth/Signup" },
+      { "src": "/Auth/google_auth", "dest": "/Auth/google_auth" },
+      { "src": "/Home", "dest": "/Home" },
+      { "src": "/Editprofile", "dest": "/Editprofile" },
+      { "src": "/Network/:user/:type", "dest": "/Network" },
+      { "src": "/Profile/:user", "dest": "/Profile" },
+      { "src": "/Post/:id", "dest": "/Post" },
+      { "src": "/CreatePost", "dest": "/CreatePost" },
+      { "src": "/Explore", "dest": "/Explore" },
+      { "src": "/People", "dest": "/People" },
+      { "src": "/Notifications", "dest": "/Notifications" },
+      { "src": "/Settings", "dest": "/Settings" },
+      { "src": "/News", "dest": "/News" }
+    ]
+  }
+  
